@@ -1,0 +1,332 @@
+$flex-padding: 26px;
+
+*
+	box-sizing: border-box
+	margin: 0
+	padding: 0
+
+html
+	font-family: 'Roboto', sans-serif
+
+header
+	border-top: 1px solid #e9e9e9
+	border-bottom: 1px solid #e9e9e9
+
+h1
+	color: #ffffff
+	font-size: 38px
+	font-weight: 900
+	text-align: left
+	text-transform: uppercase
+	line-height: 35px
+
+.container
+	width: 997px
+	margin: 0 auto
+
+.nav_menu
+	height: 40px
+
+.list
+	display: flex
+	justify-content: space-between
+	margin: 0 (-$flex-padding)
+	// margin-left: -$flex-padding
+	// margin-right: -$flex-padding
+
+	li
+		// padding: 0 6px
+		border-right: 1px dotted #353535
+		list-style-type: none
+		margin-top: 10px
+		position: relative
+		&:last-child
+			border-right: none
+		a
+			padding: 10px $flex-padding
+			color: #3b3b3b
+			font-size: 12px
+			font-weight: bold
+			text-decoration: none
+			text-transform: uppercase
+			transition: 500ms all
+		// .no_pad
+		// 	padding-left: 0
+		// 	&_r
+		// 		padding-right: 0
+		a
+			&::before, &::after
+				position: absolute
+				content: ""
+				top: -4px
+				display: block
+				width: 2px
+				height: 27px
+				border: 1px solid #a866a1
+				transition: 0.5s all
+				opacity: 0
+			&::before
+				left: -1px
+				border-right: none
+
+			&::after
+				border-left: none
+				right: -1px
+		.no_pad
+			&::before
+				left: -26px
+			&_r
+				&::after
+					right: -26px
+		a
+			&:hover
+				color: #a866a1
+				&::before, &::after
+					opacity: 1
+					
+		
+
+.logo
+	display: flex
+	justify-content: space-between
+
+.logo_img
+	width: 105px
+	height: 94px
+	margin: 13px 0 19px 0
+
+.logo .connection
+	height: 108px
+
+	.tel
+		font-size: 23px
+		text-align: right
+		text-transform: uppercase
+		font-weight: bold
+
+		span
+			color: #913d88
+
+		a
+			color: #3b3b3b
+			text-decoration: none
+
+	.btn
+		margin: 5px 0 0 0
+		color: #ffffff
+		font-size: 16px
+		font-weight: 400
+		line-height: 28px
+		text-align: center
+		width: 189px
+		height: 41px
+		border-radius: 4px
+		border: none
+		box-shadow: inset 0 -3px 0 rgba(0, 0, 0, 0.11)
+		background-image: linear-gradient(to top, #f27935 0%, #f2b235 100%)
+		cursor: pointer
+
+.woman .cond .btn
+	margin: 5px 0 0 0
+	color: #ffffff
+	font-size: 16px
+	font-weight: 400
+	line-height: 28px
+	text-align: center
+	width: 189px
+	height: 41px
+	border-radius: 4px
+	border: none
+	box-shadow: inset 0 -3px 0 rgba(0, 0, 0, 0.11)
+	background-image: linear-gradient(to top, #f27935 0%, #f2b235 100%)
+	cursor: pointer
+	display: inline-block
+	margin: 0 0 0 27px
+	height: 49px
+
+.logo .connection .descr
+	margin-top: 13px
+	color: #838383
+	font-size: 14px
+	font-weight: 300
+	text-align: right
+
+.up_icons
+	display: flex
+	padding: 36px 0 44px 0
+	margin-left: 29px
+
+#bt7
+	width: 121px
+	height: 28px
+
+#bt8
+	width: 126px
+	height: 26px
+
+#bt9
+	width: 160px
+	height: 46px
+
+.up_icons
+	.up_icon_text
+		width: 160px
+		height: 46px
+		color: #3b3b3b
+		font-size: 12px
+		font-weight: 400
+		line-height: 16px
+		text-align: left
+		margin-right: 22px
+
+	.fry_icons
+		display: flex
+		align-items: center
+
+.icon_radius
+	display: flex
+	justify-content: center
+	align-items: center
+	width: 43px
+	height: 42px
+	border-radius: 100%
+	border: 1px solid #f27935
+	margin-right: 11px
+
+.up_icons .fry_icons .fry_up_icons
+	width: 22px
+	height: 21px
+
+.woman
+	height: 534px
+	border-bottom: 5px solid #ffd55c
+	background: URL( '../img/main_fon.png' ) 53% 30% no-repeat	
+
+	.cond .input
+		padding-top: 49px
+
+.line
+	height: 5px
+	background-color: #ffd55c
+
+.woman .cond
+	padding-top: 132px
+	padding-left: 444px
+	padding-bottom: 155px
+
+	.crm
+		padding-top: 11px
+		color: #ffffff
+		font-size: 18px
+		font-weight: bold
+		line-height: 22px
+		text-align: left
+
+.cond .input
+	.env
+		vertical-align: bottom
+		padding-left: 16px
+		width: 332px
+		height: 49px
+		border: 3px solid rgba(0, 0, 0, 0.15)
+		background-color: #ffffff
+		color: #000000
+		font-size: 14px
+		font-weight: 300
+		text-align: left
+		border-radius: 3px
+
+	button
+		position: relative
+		display: inline-block
+		vertical-align: bottom
+		border: none
+		cursor: pointer
+
+		&::before
+			content: url('../icons/input/env.png')
+			display: block
+			position: absolute
+			bottom: 18px
+			left: 298px
+			width: 22px
+			height: 15px
+			opacity: 0.5
+
+.title
+	min-height: 945px
+
+	.stges
+		padding-top: 69px
+		color: #3b3b3b
+		font-size: 28px
+		font-weight: 500
+		line-height: 22px
+		text-align: center
+		text-transform: uppercase
+
+.stages_12
+	padding-top: 21px
+	display: flex
+	flex-wrap: wrap
+	justify-content: space-between
+
+	.stages_log
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content: space-between
+		width: 234px
+		min-height: 260px
+
+		.one
+			margin-top: 27px
+
+		.two
+			margin-top: 25px
+
+		.three
+			margin-top: 16px
+
+		.four
+			margin-top: 2px
+
+		.stages_text
+			color: #913d88
+			margin-bottom: 25px
+			font-size: 16px
+			font-weight: bold
+			text-align: center
+			text-transform: uppercase
+
+	.violet
+		display: block
+		padding-top: 22px
+		border-radius: 3px
+		background-color: #913d88
+
+	a
+		text-decoration: none
+
+	.violet
+		.heading
+			color: #ffffff
+			font-size: 16px
+			font-weight: bold
+			line-height: 18px
+			text-align: center
+			text-transform: uppercase
+
+		.metdhods
+			color: #ffffff
+			margin: 0
+			padding: 20px 20px 47px 20px
+			font-size: 14px
+			font-weight: 300
+			line-height: 18px
+			text-align: center
+			text-transform: none
+
+#frame
+	border: 1px solid #cccccc
+	border-radius: 3px
